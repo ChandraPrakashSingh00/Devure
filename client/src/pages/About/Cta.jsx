@@ -66,7 +66,8 @@ export default function CTAStatsSection() {
 
           <Link
             to="/services"
-            className="px-8 py-3 border border-white text-white rounded-full font-semibold hover:bg-white/10 transition inline-flex items-center gap-2 text-sm sm:text-base"
+            className="px-8 py-3 border border-white text-white rounded-full font-semibold hover:bg-white
+              hover:text-[#8B0D7A] transition inline-flex items-center gap-2 text-sm sm:text-base"
           >
             Explore Services <ArrowRight size={16} />
           </Link>

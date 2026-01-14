@@ -3,9 +3,9 @@ import { FaLinkedinIn, FaXTwitter, FaInstagram } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="relative w-full overflow-hidden bg-[#8B0D7A] text-white px-6 sm:px-10 lg:px-16 py-20">
+    <footer className="relative w-full overflow-hidden bg-[#8B0D7A] text-white px-6 sm:px-10 lg:px-16 py-12">
 
-      {/* ===== GEOMETRIC SHAPE BACKGROUND (SAME STYLE AS ABOUT HEADER) ===== */}
+      {/* ===== GEOMETRIC SHAPE BACKGROUND ===== */}
       <div className="absolute inset-0 pointer-events-none">
 
         {/* Shape 1 */}
@@ -49,32 +49,32 @@ const Footer = () => {
       </div>
 
       {/* ===== CONTENT ===== */}
-      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
         {/* LEFT : LOGO + INFO */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <img
-            src="img/bg.png"
+            src="/img/bg.png"
             alt="Devure Technology Logo"
-            className="w-20 h-20 object-contain mb-3 filter brightness-0 invert"
+            className="w-16 h-16 object-contain mb-2 filter brightness-0 invert"
           />
 
-          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight">
+          <h3 className="text-2xl sm:text-3xl font-bold tracking-tight">
             Devure Technology{" "}
             <span className="text-white/80">– IT Solutions</span>
           </h3>
 
-          <p className="mt-3 text-sm sm:text-base text-white/85 max-w-md leading-relaxed">
+          <p className="mt-2 text-sm sm:text-base text-white/80 max-w-md leading-relaxed">
             Your trusted partner in modern website solutions, building
             high-converting digital experiences for visionary brands.
           </p>
         </div>
 
         {/* RIGHT : SOCIALS + CTA */}
-        <div className="flex flex-col sm:flex-row md:justify-end items-center gap-6">
+        <div className="flex flex-col sm:flex-row md:justify-end items-center gap-4 sm:gap-6">
 
           {/* SOCIAL ICONS */}
-          <div className="flex gap-3">
+          <div className="flex gap-2 sm:gap-3">
             {[
               {
                 icon: <FaLinkedinIn size={18} />,
@@ -94,7 +94,7 @@ const Footer = () => {
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 rounded-lg bg-white/10 border border-white/20 hover:bg-white/20 transition"
+                className="p-2 rounded-lg bg-white/10 border border-white/20 hover:bg-white/20 transition"
               >
                 {item.icon}
               </a>
@@ -106,7 +106,7 @@ const Footer = () => {
             href="https://wa.me/919718608520"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3 bg-white text-[#8B0D7A] font-semibold rounded-xl hover:bg-gray-100 transition shadow-md"
+            className="px-5 py-2.5 bg-white text-[#8B0D7A] font-semibold rounded-xl hover:bg-gray-100 transition shadow-md text-sm sm:text-base"
           >
             Connect Now ↗
           </a>
@@ -114,7 +114,7 @@ const Footer = () => {
       </div>
 
       {/* ===== BOTTOM ===== */}
-      <div className="relative z-10 mt-14 pt-6 text-center text-xs sm:text-sm text-white/70 border-t border-white/25">
+      <div className="relative z-10 mt-8 pt-4 text-center text-xs sm:text-sm text-white/70 border-t border-white/25">
         © {new Date().getFullYear()} Devure Technology — All rights reserved.
       </div>
     </footer>

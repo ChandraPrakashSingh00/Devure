@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { ArrowUp } from "lucide-react";
 
 import HowWeWork from "../Public/HowWeWork.jsx";
 import HeroSection from "../Public/HeroSection.jsx";
@@ -9,18 +10,31 @@ import Software from "../Public/Software.jsx";
 import FAQSection from "../Public/FAQSection.jsx";
 
 export default function Home() {
+  const [showArrow, setShowArrow] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setShowArrow(window.scrollY > 300);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <>
       {/* ================= HOME HERO SECTION ================= */}
       <section className="relative w-full min-h-screen bg-white overflow-hidden">
 
-        {/* ===== BACKGROUND SHAPES (SAME STYLE AS HowWeWork) ===== */}
+        {/* ===== BACKGROUND SHAPES (SAME AS HOW WE WORK) ===== */}
         <div className="absolute inset-0 pointer-events-none">
 
           {/* Top Left Blob */}
           <div
             className="
-              absolute -top-24 -left-24
+              absolute
+              -top-24 -left-24
               w-[260px] h-[260px]
               sm:w-[320px] sm:h-[320px]
               lg:w-[420px] lg:h-[420px]
@@ -33,7 +47,8 @@ export default function Home() {
           {/* Bottom Right Blob */}
           <div
             className="
-              absolute -bottom-24 -right-24
+              absolute
+              -bottom-24 -right-24
               w-[260px] h-[260px]
               sm:w-[320px] sm:h-[320px]
               lg:w-[420px] lg:h-[420px]
@@ -46,7 +61,8 @@ export default function Home() {
           {/* Center Glow */}
           <div
             className="
-              absolute top-1/2 left-1/2
+              absolute
+              top-1/2 left-1/2
               w-[200px] h-[200px]
               sm:w-[240px] sm:h-[240px]
               lg:w-[280px] lg:h-[280px]
@@ -60,11 +76,13 @@ export default function Home() {
           {/* Dotted Pattern Left */}
           <div
             className="
-              absolute top-24 left-8
+              absolute
+              top-24 left-8
               w-[120px] h-[120px]
               sm:w-[140px] sm:h-[140px]
               lg:w-[160px] lg:h-[160px]
-              opacity-25 hidden md:block
+              opacity-25
+              hidden md:block
             "
             style={{
               backgroundImage:
@@ -76,11 +94,13 @@ export default function Home() {
           {/* Dotted Pattern Right */}
           <div
             className="
-              absolute bottom-24 right-10
+              absolute
+              bottom-24 right-10
               w-[130px] h-[130px]
               sm:w-[150px] sm:h-[150px]
               lg:w-[180px] lg:h-[180px]
-              opacity-20 hidden md:block
+              opacity-20
+              hidden md:block
             "
             style={{
               backgroundImage:
@@ -89,19 +109,18 @@ export default function Home() {
             }}
           />
 
-          {/* Diagonal Accent Lines */}
+          {/* Diagonal Accent Lines (Desktop only) */}
           <div className="absolute top-36 right-32 w-[160px] h-px bg-[#8B0D7A]/30 rotate-45 hidden lg:block" />
           <div className="absolute top-44 right-40 w-[220px] h-px bg-[#8B0D7A]/20 rotate-45 hidden lg:block" />
         </div>
 
         {/* ===== CONTENT ===== */}
-        <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-12 pt-24 pb-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 pt-24 pb-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
           {/* LEFT CONTENT */}
-          <div className="text-center lg:text-left text-[#0b2f32] max-w-xl">
+          <div className="text-center lg:text-left max-w-xl text-[#0b2f32]">
             <h1 className="text-[36px] sm:text-[44px] md:text-[52px] lg:text-[50px] font-bold leading-tight">
-              Web Solutions <br />
-              Built for Digital Growth
+              Web Solutions <br /> Built for Digital Growth
             </h1>
 
             <p className="mt-5 text-[16px] sm:text-[17px] md:text-[18px] text-gray-700 leading-relaxed">
@@ -109,11 +128,10 @@ export default function Home() {
               businesses grow and scale securely.
             </p>
 
-            {/* BUTTONS */}
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link
                 to="/about"
-                className="px-10 py-3.5 bg-[#8B0D7A] text-white font-semibold rounded-lg hover:bg-[#6F0A60] transition text-center"
+                className="px-14 sm:px-16 py-3.5 bg-[#8B0D7A] text-white font-semibold rounded-lg hover:bg-[#6F0A60] transition"
               >
                 Get Started
               </Link>
@@ -122,23 +140,23 @@ export default function Home() {
                 href="https://wa.me/9718608520"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-10 py-3.5 bg-white text-[#8B0D7A] font-semibold rounded-lg border border-[#8B0D7A] hover:bg-[#8B0D7A] hover:text-white transition text-center"
+                className="px-14 sm:px-16 py-3.5 border border-[#8B0D7A] text-[#8B0D7A] font-semibold rounded-lg hover:bg-[#8B0D7A] hover:text-white transition"
               >
                 Join Now
               </a>
             </div>
 
-            <p className="mt-7 text-sm sm:text-base text-[#8B0D7A] font-medium">
+            <p className="mt-7 text-[#8B0D7A] font-medium">
               Trusted • Scalable • Technology-Driven
             </p>
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="relative flex justify-center lg:justify-end">
+          <div className="flex justify-center lg:justify-end">
             <img
               src="/img/image.png"
               alt="Devure Technology Dashboard"
-              className="w-[240px] sm:w-[300px] md:w-[360px] lg:w-[420px] object-contain"
+              className="w-[240px] sm:w-[300px] md:w-[360px] lg:w-[420px]"
             />
           </div>
         </div>
@@ -151,6 +169,24 @@ export default function Home() {
       <Pricing />
       <Software />
       <FAQSection />
+
+      {/* ================= SCROLL TO TOP ================= */}
+      <button
+        onClick={scrollToTop}
+        aria-label="Scroll to top"
+        className={`
+          fixed bottom-6 right-6 z-50
+          w-12 h-12 rounded-full
+          bg-[#8B0D7A] text-white
+          flex items-center justify-center
+          shadow-xl
+          hover:bg-[#6F0A60]
+          transition-all duration-300
+          ${showArrow ? "opacity-100 scale-100" : "opacity-0 scale-90 pointer-events-none"}
+        `}
+      >
+        <ArrowUp size={22} strokeWidth={2.5} />
+      </button>
     </>
   );
 }

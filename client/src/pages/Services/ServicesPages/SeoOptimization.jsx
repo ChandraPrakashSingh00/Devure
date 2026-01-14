@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import OurApproachSection from "../../Others/OurApproachSection";
+import SEOOurApproach from "../../Others/SEOOurApproach";
 
-export default function WebDevelopmentHeader() {
+export default function SeoOptimizationHeader() {
   return (
     <>
       {/* ================= HEADER ================= */}
       <header className="relative w-full overflow-hidden bg-[#8B0D7A]">
 
         {/* ================= BASE GRADIENT BACKGROUND ================= */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#8B0D7A] via-[#9C1A86] to-[#6F0B61]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#8B0D7A] via-[#9C1A86] to-[#5A084F]" />
 
         {/* ================= SUBTLE GRID ================= */}
         <div
@@ -21,30 +21,23 @@ export default function WebDevelopmentHeader() {
           }}
         />
 
-        {/* ================= FLOW LINES ================= */}
+        {/* ================= FLOW / RANKING LINES ================= */}
         <svg
           className="absolute inset-0 w-full h-full opacity-30"
           viewBox="0 0 1200 600"
           preserveAspectRatio="none"
         >
-          <path
-            d="M0 160 H260 V120 H520 V210 H820 V140 H1200"
+          <polyline
+            points="0,420 200,360 420,380 640,300 860,260 1200,200"
             fill="none"
             stroke="rgba(255,255,255,0.35)"
-            strokeWidth="1.5"
+            strokeWidth="2"
           />
-          <path
-            d="M0 380 H300 V430 H600 V330 H900 V390 H1200"
-            fill="none"
-            stroke="rgba(255,255,255,0.25)"
-            strokeWidth="1.5"
-          />
-          <circle cx="260" cy="160" r="4" fill="white" />
-          <circle cx="520" cy="120" r="4" fill="white" />
-          <circle cx="820" cy="210" r="4" fill="white" />
-          <circle cx="300" cy="380" r="4" fill="white" />
-          <circle cx="600" cy="430" r="4" fill="white" />
-          <circle cx="900" cy="330" r="4" fill="white" />
+          <circle cx="200" cy="360" r="4" fill="white" />
+          <circle cx="420" cy="380" r="4" fill="white" />
+          <circle cx="640" cy="300" r="4" fill="white" />
+          <circle cx="860" cy="260" r="4" fill="white" />
+          <circle cx="1200" cy="200" r="4" fill="white" />
         </svg>
 
         {/* ================= DARK DEPTH OVERLAY ================= */}
@@ -53,13 +46,13 @@ export default function WebDevelopmentHeader() {
         {/* ================= CONTENT ================= */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 pt-20 pb-16 text-center flex flex-col items-center gap-5">
           <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
-            Web Development
+            SEO Optimization
           </h1>
 
           <p className="text-white/90 text-base sm:text-lg max-w-3xl leading-relaxed">
-            We design and develop modern, high-performance websites and web
-            applications that are fast, secure, scalable, and built to convert
-            users into customers.
+            We deliver data-driven SEO strategies that improve search engine
+            rankings, increase organic visibility, and drive qualified traffic
+            through technical SEO, content optimization, and performance analytics.
           </p>
 
           {/* ================= BREADCRUMB ================= */}
@@ -72,13 +65,13 @@ export default function WebDevelopmentHeader() {
               Services
             </Link>
             <span>•</span>
-            <span className="text-white">Web Development</span>
+            <span className="text-white">SEO Optimization</span>
           </span>
         </div>
       </header>
 
       {/* ================= OUR APPROACH ================= */}
-      <OurApproachSection />
+      <SEOOurApproach />
     </>
   );
 }

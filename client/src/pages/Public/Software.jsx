@@ -2,7 +2,7 @@ import React from "react";
 
 export default function SoftwareCTASection() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#8B0D7A] py-28 px-4">
+    <section className="relative w-full overflow-hidden bg-[#8B0D7A] py-24 sm:py-28 px-4">
 
       {/* ===== GEOMETRIC BACKGROUND SHAPES ===== */}
       <div className="absolute inset-0 pointer-events-none">
@@ -43,20 +43,37 @@ export default function SoftwareCTASection() {
           }}
         />
 
-        {/* Soft overlay for depth */}
-        <div className="absolute inset-0 bg-black/15" />
+        {/* Dark overlay for depth */}
+        <div className="absolute inset-0 bg-black/20" />
       </div>
 
       {/* ===== CONTENT ===== */}
-      <div className="relative z-10 max-w-4xl mx-auto text-center">
+      <div className="relative z-10 max-w-5xl mx-auto text-center">
 
-        {/* Heading */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight">
+        {/* Heading – SAME FEEL AS HowWeWork */}
+        <h2 className="
+          text-3xl
+          sm:text-4xl
+          md:text-5xl
+          lg:text-6xl
+          font-bold
+          text-white
+          leading-tight
+        ">
           Innovation starts here
         </h2>
 
-        {/* Description */}
-        <p className="mt-6 text-white/90 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
+        {/* Description – clean & readable */}
+        <p className="
+          mt-6
+          text-white/90
+          text-sm
+          sm:text-base
+          md:text-lg
+          leading-relaxed
+          max-w-3xl
+          mx-auto
+        ">
           We design and develop scalable software solutions by solving real-world
           problems. From custom web and mobile applications to enterprise-grade
           systems, we collaborate with forward-thinking businesses to build
@@ -64,17 +81,28 @@ export default function SoftwareCTASection() {
         </p>
 
         {/* CTA Buttons */}
-        <div className="mt-10 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+        <div className="
+          mt-10 sm:mt-12
+          flex
+          flex-col sm:flex-row
+          items-center
+          justify-center
+          gap-4 sm:gap-6
+        ">
 
           <a
             href="/contact"
             className="
               w-full sm:w-auto
-              px-10 py-4 rounded-full
-              text-white text-sm sm:text-base font-medium
-              border border-white/60
-              hover:bg-white hover:text-[#8B0D7A]
-              transition
+              px-10 py-4
+              rounded-full
+              text-white
+              text-sm sm:text-base
+              font-semibold
+              border border-white/70
+              hover:bg-white
+              hover:text-[#8B0D7A]
+              transition-all duration-300
             "
           >
             Start a project
@@ -84,11 +112,15 @@ export default function SoftwareCTASection() {
             href="/careers"
             className="
               w-full sm:w-auto
-              px-10 py-4 rounded-full
-              text-white text-sm sm:text-base font-medium
-              border border-white/60
-              hover:bg-white hover:text-[#8B0D7A]
-              transition
+              px-10 py-4
+              rounded-full
+              text-white
+              text-sm sm:text-base
+              font-semibold
+              border border-white/70
+              hover:bg-white
+              hover:text-[#8B0D7A]
+              transition-all duration-300
             "
           >
             Join our team
