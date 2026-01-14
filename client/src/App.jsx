@@ -12,6 +12,14 @@ import Footer from "./Components/Layout/Footer.jsx";
 import ScrollToTop from "./Components/Layout/ScrollToTop.jsx";
 import SignUp from "./Components/Auth/SignUp.jsx";
 
+// Services Pages
+import WebsiteDevelopment from "./pages/Services/ServicesPages/WebsiteDevelopment.jsx"
+import EcommerceSolution from "./pages/Services/ServicesPages/EcommerceSolution.jsx"
+import AppDevelopment from "./pages/Services/ServicesPages/AppDevelopment.jsx"
+import SeoOptimization from "./pages/Services/ServicesPages/SeoOptimization.jsx"
+import UiUxDesign from "./pages/Services/ServicesPages/UiUxDesign.jsx"
+import DigitalMarketing from "./pages/Services/ServicesPages/Digital Marketing.jsx"
+
 const App = () => {
   return (
     <>
@@ -25,6 +33,15 @@ const App = () => {
       <Route path="/contact" element={<Contact />} />
 
       <Route path="/SignUp" element={<SignUp />} />
+
+      {/* Services Pages */}
+      <Route path="/servicespages/websitedevelopment" element={<WebsiteDevelopment/>} />
+      <Route path="/servicespages/ecommercesolution" element={<EcommerceSolution/>} />
+      <Route path="/servicespages/appdevelopment" element={<AppDevelopment/>} />
+      <Route path="/servicespages/seooptimization" element={<SeoOptimization/>} />
+      <Route path="/servicespages/uiuxdesign" element={<UiUxDesign/>} />
+      <Route path="/servicespages/Digitalmarketing" element={<DigitalMarketing/>} />
+
     </Routes>
     <Footer/>
     </>
