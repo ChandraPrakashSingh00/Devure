@@ -49,18 +49,19 @@ export default function ContactSection() {
     {
       icon: <Phone size={26} />,
       title: "Phone Support",
-      text: "+91 234 567 8901\n+91 987 654 3210",
+      text: "+91 8810503029 \n+91 9718608520",
     },
     {
       icon: <Mail size={26} />,
       title: "Email Address",
-      text: "contact@devuretech.com\nsupport@devuretech.com",
+      text: "devuretechnology@gmail.com\nhrdevuretechnology@gmail.com",
     },
-    {
-      icon: <MapPin size={26} />,
-      title: "Office Location",
-      text: "Devure Technology\nAl Quoz, Dubai / India",
-    },
+   {
+  icon: <MapPin size={26} />,
+  title: "Office Location",
+  text: "14th Avenue, Gaur City 2, Near Brahma Mandir, Greater Noida (West), Uttar Pradesh, India"
+}
+
   ];
 
   return (
